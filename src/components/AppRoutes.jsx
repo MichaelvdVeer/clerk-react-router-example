@@ -1,6 +1,6 @@
 // src/components/AppRoutes.jsx
 import React, { Suspense } from "react";
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router";
 import { Spinner, Center } from "@chakra-ui/react";
 import { AuthenticateWithRedirectCallback } from "@clerk/clerk-react";
 

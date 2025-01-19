@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { useMedia } from "react-use";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink } from "react-router";
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { useSignIn, useSignUp, useClerk } from "@clerk/clerk-react";

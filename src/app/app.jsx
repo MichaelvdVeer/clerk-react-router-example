@@ -1,5 +1,5 @@
 import { useAuth } from "@clerk/clerk-react";
-import { RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router";
 import ErrorBoundary from "../components/ErrorBoundary";
 import AppRoutes from "../components/AppRoutes";
 import LoadingPage from "../components/LoadingPage";

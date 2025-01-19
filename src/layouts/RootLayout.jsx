@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 import { Box, Flex, Spinner, Center } from "@chakra-ui/react";
 import { Suspense } from "react";
 

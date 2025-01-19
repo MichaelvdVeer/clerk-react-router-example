@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useMedia } from "react-use";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import PropTypes from "prop-types";
 import { useSignUp, useSignIn } from "@clerk/clerk-react";
 import { Box, Input, Flex, Image, Text, Link, Spinner } from "@chakra-ui/react";
