@@ -17,7 +17,7 @@ However, the previously mentioned error message persists.
 
 Could you help me resolve this issue?
 
-## Steps to Run the Project and reproduce the issue
+## Steps to run the project and reproduce the issue
 
 Follow these steps to run the project locally and reproduce the issue:
 
