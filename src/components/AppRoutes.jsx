@@ -2,7 +2,7 @@
 import React, { Suspense } from "react";
 import { createBrowserRouter, Navigate } from "react-router";
 import { Spinner, Center } from "@chakra-ui/react";
-import { AuthenticateWithRedirectCallback } from "@clerk/clerk-react";
+import { AuthenticateWithRedirectCallback } from "@clerk/react-router";
 
 // Lazy-loaded components
 const AuthenticationPage = React.lazy(() =>
@@ -24,50 +24,38 @@ const loadingSpinner = (
 );
 
 const AppRoutes = (isSignedIn) => {
-  return createBrowserRouter(
-    [
-      {
-        path: "/",
-        element: (
-          <Suspense fallback={loadingSpinner}>
-            {isSignedIn ? <Navigate to="/feed" /> : <AuthenticationPage />}
-          </Suspense>
-        ),
-      },
-      {
-        path: "/sso-callback",
-        element: <AuthenticateWithRedirectCallback />,
-      },
-      {
-        path: "/onboarding",
-        element: (
-          <Suspense fallback={loadingSpinner}>
-            <ProtectedRouteOnboarding element={<OnboardingPage />} />
-          </Suspense>
-        ),
-      },
-      {
-        element: (
-          <Suspense fallback={loadingSpinner}>
-            <RootLayout />
-          </Suspense>
-        ),
-        children: [
-          { path: "/feed", element: <ProtectedRoute element={<FeedPage />} /> },
-        ],
-      },
-    ],
+  return createBrowserRouter([
     {
-      future: {
-        v7_relativeSplatPath: true,
-        v7_fetcherPersist: true,
-        v7_normalizeFormMethod: true,
-        v7_partialHydration: true,
-        v7_skipActionStatusRevalidation: true,
-        v7_skipActionErrorRevalidation: true,
-      },
-    }
-  );
+      path: "/",
+      element: (
+        <Suspense fallback={loadingSpinner}>
+          {isSignedIn ? <Navigate to="/feed" /> : <AuthenticationPage />}
+        </Suspense>
+      ),
+    },
+    {
+      path: "/sso-callback",
+      element: <AuthenticateWithRedirectCallback />,
+    },
+    {
+      path: "/onboarding",
+      element: (
+        <Suspense fallback={loadingSpinner}>
+          <ProtectedRouteOnboarding element={<OnboardingPage />} />
+        </Suspense>
+      ),
+    },
+    {
+      element: (
+        <Suspense fallback={loadingSpinner}>
+          <RootLayout />
+        </Suspense>
+      ),
+      children: [
+        { path: "/feed", element: <ProtectedRoute element={<FeedPage />} /> },
+      ],
+    },
+  ]);
 };
 
 export default AppRoutes;

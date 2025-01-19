@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Navigate } from "react-router";
-import { useAuth } from "@clerk/clerk-react";
+import { useAuth } from "@clerk/react-router";
 
 const ProtectedRoute = ({ element }) => {
   const { isSignedIn, isLoaded } = useAuth();

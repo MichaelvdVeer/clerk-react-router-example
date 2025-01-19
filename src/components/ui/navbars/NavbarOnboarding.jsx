@@ -1,6 +1,6 @@
 import { Flex, Link, Box, Text } from "@chakra-ui/react";
 import { Toaster, toaster } from "../toaster";
-import { useAuth } from "@clerk/clerk-react";
+import { useAuth } from "@clerk/react-router";
 
 const NavbarOnboarding = () => {
   const { signOut } = useAuth();

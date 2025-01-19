@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { ClerkProvider } from "@clerk/clerk-react";
+import { ClerkProvider } from "@clerk/react-router";
 import { Provider as ReduxProvider } from "react-redux";
 import { Provider as ChakraProvider } from "./components/ui/provider";
 import { defaultSystem } from "@chakra-ui/react";

@@ -4,7 +4,7 @@ import { useMedia } from "react-use";
 import { Link as RouterLink } from "react-router";
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
-import { useSignIn, useSignUp, useClerk } from "@clerk/clerk-react";
+import { useSignIn, useSignUp, useClerk } from "@clerk/react-router";
 import { newAccountClicked } from "../../features/auth/authSlice";
 import { Box, Input, Text, Link, Flex, Image } from "@chakra-ui/react";
 import { PasswordInput } from "../ui/password-input";

@@ -1,4 +1,4 @@
-import { useAuth } from "@clerk/clerk-react";
+import { useAuth } from "@clerk/react-router";
 import { RouterProvider } from "react-router";
 import ErrorBoundary from "../components/ErrorBoundary";
 import AppRoutes from "../components/AppRoutes";
@@ -15,12 +15,7 @@ const App = () => {
 
   return (
     <ErrorBoundary>
-      <RouterProvider
-        // future={{
-        //   v7_startTransition: true,
-        // }}
-        router={router}
-      />
+      <RouterProvider router={router} />
     </ErrorBoundary>
   );
 };
