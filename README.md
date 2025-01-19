@@ -9,9 +9,9 @@ Uncaught Error: useNavigate() may be used only in the context of a <Router> comp
 
 I have tried several possible solutions:
 
-Using a different Node.js version
-Using a different Vite version
-Using a different React Router version
+- Using a different Node.js version,
+- Using a different Vite version,
+- Using a different React Router version
 
 However, the previously mentioned error message persists.
 
