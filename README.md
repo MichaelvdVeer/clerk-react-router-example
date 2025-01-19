@@ -1,7 +1,5 @@
 # Clerk React Router Example
 
-# Clerk React Router Example
-
 This project is a minimal reproduction of an issue when using @clerk/react-router with a custom sign-up flow and React Router V7.
 When migrating from @clerk/clerk-react to @clerk/react-router, an error message appears:
 
