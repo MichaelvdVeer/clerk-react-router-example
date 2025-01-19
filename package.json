@@ -1,9 +1,9 @@
 {
-  "name": "react-kitmanager-chakra-v3",
+  "name": "clerk-react-router-example",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "description": "React application for kitmanager",
+  "description": "This project is a minimal reproduction of an issue when using @clerk/react-router with a custom sign-up flow and React Router V7.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
